@@ -1,0 +1,20 @@
+header{
+    /* border: 1px solid red; */
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 2px solid #333; */
+    position: sticky;
+    background-color: transparent;
+    #logo{
+        font-weight: bold;
+    }
+
+}
+#circle{
+    border: 2px solid #333;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+}
