@@ -6,14 +6,15 @@ header{
     align-items: center;
     /* border-bottom: 2px solid #333; */
     position: sticky;
-    background-color: transparent;
+    background-color: #2e303a;
+    color: #f2f2f2;
     #logo{
         font-weight: bold;
     }
 
 }
 #circle{
-    border: 2px solid #333;
+    border: 2px solid #ffffff;
     height: 36px;
     width: 36px;
     border-radius: 50%;

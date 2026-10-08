@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 import Header from "../header/Header";
 import "./landing.css"
 export default function Landing(){
@@ -6,7 +8,7 @@ export default function Landing(){
       
         <div id="hero">
             <div id="first">
-                <div id="left"><p>Secure Cloud Storage <br></br>for your files</p>
+                <div id="left"><p>SECURE CLOUD STORAGE <br></br>FOR YOUR FILES</p>
             
                 </div>
                 <div id="hero-img"><img alt="dynocloud hero img" src="/dynocloud-logo2.png"></img></div>
@@ -21,7 +23,7 @@ export default function Landing(){
             </div>
             
                 <div>
-                    <button className="signup-btn">Let's go</button>
+                    <Link to="/signup" className="signup-btn">Let's go &#x2192;</Link>
                 </div>
         </div>
         </div>
