@@ -1,7 +1,15 @@
 import "./login.css"
 import { Link } from "react-router-dom"
-
+import { generateRecoveryPhrase } from "../../../utilities/generateRecoveryPhrase"
+import { useState } from "react";
 export default function Signup(){
+
+    const [recoveryPhrase, setRecoveryPhrase ] = useState("generate recovery phrase");
+
+    function handleGeneratePhrase(){
+        setRecoveryPhrase(generateRecoveryPhrase());
+    }
+
     return(
         <>
         <div className="authpage-container">
@@ -20,9 +28,11 @@ export default function Signup(){
                     <label htmlFor="password">Confirm password:</label>
                     <input type="text" placeholder="confirm password"></input>
                     
-                    <label htmlFor="recovery-pharse">Recovery Phrase:</label>
-                    <input type="text" placeholder="generate recovery phrase" disabled></input>
-                    <button id="generate-btn">Generate</button>
+                    <label htmlFor="recovery-pharse">Recovery Phrase: copy and save it, it will be used to recover your account</label>
+                    <input type="text" placeholder={recoveryPhrase} disabled></input>
+
+                    <button type="button" onClick={()=> navigator.clipboard.writeText(recoveryPhrase)}>copy</button>
+                    <button type="button" id="generate-btn" onClick={handleGeneratePhrase}>Generate</button>
                     
 
                     <button>Signup</button>
