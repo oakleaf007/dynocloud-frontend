@@ -6,7 +6,7 @@ export default function Signup(){
         <>
         <div className="authpage-container">
             <div id="signup" className="auth-page">
-                <p>Sign up</p>
+                <h3 className="form-label">Sign up</h3>
                 <form className="form-page">
                     <label htmlFor="username">Username:</label>
                     <input type="text" placeholder="username" id="username"></input>
@@ -19,12 +19,18 @@ export default function Signup(){
 
                     <label htmlFor="password">Confirm password:</label>
                     <input type="text" placeholder="confirm password"></input>
+                    
+                    <label htmlFor="recovery-pharse">Recovery Phrase:</label>
+                    <input type="text" placeholder="generate recovery phrase" disabled></input>
+                    <button id="generate-btn">Generate</button>
+                    
+
                     <button>Signup</button>
                   
                         
                 </form>
-                  <p>or</p> 
-                    <p>Already have an account?</p>
+                  
+                    <div className="dialogue">or <br></br>Already have an account?</div>
                     <Link to="/login" className="auth-switch" >Login</Link>
             </div>
 
